@@ -686,11 +686,7 @@
 @media (max-width: 768px) {
   .profile-hero {
     padding: 3rem 1.25rem 4rem;
-  }
-
-  .profile-hero {
     align-items: flex-start;
-    padding-top: 3rem;
   }
 
   .profile-hero-inner {
