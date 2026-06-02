@@ -1,4 +1,4 @@
-const semanas = [
+export const semanas = [
 
   /* Semana 1 */
   {

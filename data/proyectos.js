@@ -1,4 +1,4 @@
-const proyectos = [
+export const proyectos = [
 
   {
     titulo:      "Practica semana 4 Desarrollo Web",
