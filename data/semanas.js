@@ -25,7 +25,7 @@ Lenguaje utilizado para estructurar el contenido de una página web.
 Lenguaje encargado del diseño y la apariencia visual de las páginas web.
 ### JavaScript
 Lenguaje de programación que permite agregar interactividad y dinamismo a las páginas web.
-[img: assets/img/HTML-CSS-JS.webp | Tecnologías Web Básicas]
+[img: /assets/img/HTML-CSS-JS.webp | Tecnologías Web Básicas]
 ## Lenguajes y Tecnologías Complementarias
 - **PHP:** Desarrollo backend.
 - **Python:** Desarrollo web y procesamiento de datos.
@@ -87,7 +87,7 @@ Idea especulativa relacionada con sistemas de control y filtrado de acceso, simi
 Representa el caos digital asociado a malware, botnets y datos corruptos.
 ### Sistema Primarca
 Teoría sobre una entidad autónoma que controlaría funciones ocultas de internet.
-[img: assets/img/nivelesweb.webp | Niveles de la Web]
+[img: /assets/img/nivelesweb.webp | Niveles de la Web]
 ## Open Web Platform
 Conjunto de tecnologías y estándares abiertos para el desarrollo web.
 ### Organizaciones principales
@@ -170,7 +170,7 @@ El backend procesa la lógica de la aplicación, administra la información y se
 #### APIs
 - REST
 - GraphQL
-[img: assets/img/frontend_vs_backend.webp | Frontend vs Backend]
+[img: /assets/img/frontend_vs_backend.webp | Frontend vs Backend]
 ## Diseño UX/UI
 ### Experiencia de Usuario e Interfaz
 El diseño UX/UI busca crear interfaces atractivas, funcionales y fáciles de usar.
@@ -191,7 +191,7 @@ Se enfoca en el diseño visual: colores, botones, tipografía y distribución.
 - Accesibilidad
 - Retroalimentación visual
 - Jerarquía visual
-[img: assets/img/ux-ui.webp | Diseño UX/UI]`,
+[img: /assets/img/ux-ui.webp | Diseño UX/UI]`,
 
     reflexion: `La clase permitió comprender que el desarrollo web moderno requiere la integración de varias áreas especializadas. El frontend se encarga de la interacción visual con el usuario, mientras que el backend administra la lógica y los datos del sistema. Además, el diseño UX/UI cumple un papel fundamental al garantizar que las aplicaciones sean atractivas, intuitivas y accesibles. La combinación de estas áreas permite crear aplicaciones web funcionales y con una mejor experiencia para los usuarios.`,
 
@@ -319,7 +319,7 @@ Existen múltiples enfoques para aplicar estilos en una aplicación React, cada 
 - **4. Framework CSS (Tailwind):** Clases utilitarias aplicadas directamente en el JSX. Alta productividad, consistencia de diseño y excelente integración con React y Vite.
 - **5. Styled Components:** CSS-in-JS que genera componentes con estilos encapsulados usando template literals. Soporta props dinámicas y theming avanzado.
 ## GINKANA
-[img: assets/img/ginkana.webp | GINKANA]`,
+[img: /assets/img/ginkana.webp | GINKANA]`,
 
     reflexion: `La clase permitió comprender cómo React facilita el desarrollo de aplicaciones modernas mediante componentes reutilizables y una estructura organizada. El uso de JSX, props y children demuestra cómo React mejora la construcción de interfaces dinámicas y mantenibles. Además, conocer herramientas como Vite y diferentes estrategias de estilos ayuda a desarrollar proyectos más escalables, eficientes y adaptables a las necesidades actuales del desarrollo frontend.`,
 
