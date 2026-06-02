@@ -1,10 +1,31 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+
+const NAV_OFFSET = 72;
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const closeMenu = () => setMenuOpen(false);
+
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const top = el.getBoundingClientRect().top + window.scrollY - NAV_OFFSET;
+    window.scrollTo({ top, behavior: "smooth" });
+  };
+
+  const goToSection = (id) => {
+    closeMenu();
+    if (location.pathname !== "/") {
+      navigate(`/#${id}`);
+      return;
+    }
+    window.history.replaceState(null, "", `/#${id}`);
+    scrollToSection(id);
+  };
 
   return (
     <nav>
@@ -23,7 +44,7 @@ export default function Navbar() {
           <NavLink
             id="nav-home"
             to="/"
-            className={({ isActive }) => (isActive ? "active" : "")}
+            className={({ isActive }) => (isActive && !location.hash ? "active" : "")}
             onClick={closeMenu}
             end
           >
@@ -31,14 +52,17 @@ export default function Navbar() {
           </NavLink>
         </li>
         <li>
-          <NavLink
+          <a
             id="nav-sobre-mi"
-            to="/sobre-mi"
-            className={({ isActive }) => (isActive ? "active" : "")}
-            onClick={closeMenu}
+            href="/#sobre-mi"
+            className={location.pathname === "/" && location.hash === "#sobre-mi" ? "active" : ""}
+            onClick={(e) => {
+              e.preventDefault();
+              goToSection("sobre-mi");
+            }}
           >
             Sobre mí
-          </NavLink>
+          </a>
         </li>
         <li>
           <NavLink

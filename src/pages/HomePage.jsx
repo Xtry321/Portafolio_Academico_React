@@ -1,42 +1,33 @@
-import { Link } from "react-router-dom";
-import { useTypewriter } from "../hooks/useTypewriter";
-import { useScrollToTop } from "../hooks/useScrollToTop";
+import ProfileHero from "../components/profile/ProfileHero";
+import AcademicSection from "../components/profile/AcademicSection";
+import SkillsSection from "../components/profile/SkillsSection";
+import ExperienceSection from "../components/profile/ExperienceSection";
+import ContactSection from "../components/profile/ContactSection";
+import ScrollReveal from "../components/ui/ScrollReveal";
+import { useHashScroll } from "../hooks/useHashScroll";
 
 export default function HomePage() {
-  const typewriterText = useTypewriter();
-  useScrollToTop();
+  useHashScroll();
 
   return (
-    <div id="page-home" className="page visible">
-      <section id="home">
-        <div className="home-bg">
-          <div className="grid-overlay"></div>
-          <div className="home-bg-glow-blue"></div>
-          <div className="home-bg-glow-green"></div>
-        </div>
+    <div id="page-home" className="page visible home-page">
+      <ProfileHero />
 
-        <span className="home-label">Portafolio · Ingeniería de Sistemas</span>
+      <ScrollReveal>
+        <AcademicSection />
+      </ScrollReveal>
 
-        <h1 className="home-name">
-          José Eduardo
-          <br />
-          <span>Araujo Champi</span>
-        </h1>
+      <ScrollReveal>
+        <SkillsSection />
+      </ScrollReveal>
 
-        <div className="typewriter-wrap">
-          <span id="typewriter-text">{typewriterText}</span>
-          <span className="cursor"></span>
-        </div>
+      <ScrollReveal>
+        <ExperienceSection />
+      </ScrollReveal>
 
-        <div className="home-cta">
-          <Link className="btn-primary" to="/sobre-mi">
-            Conocerme más
-          </Link>
-          <Link className="btn-outline" to="/proyectos">
-            Ver proyectos
-          </Link>
-        </div>
-      </section>
+      <ScrollReveal>
+        <ContactSection />
+      </ScrollReveal>
     </div>
   );
 }

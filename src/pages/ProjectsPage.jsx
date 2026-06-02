@@ -1,4 +1,5 @@
 import ProjectCard from "../components/projects/ProjectCard";
+import ScrollReveal from "../components/ui/ScrollReveal";
 import { proyectos } from "../data/proyectos";
 import { useScrollToTop } from "../hooks/useScrollToTop";
 
@@ -8,8 +9,10 @@ export default function ProjectsPage() {
   return (
     <div id="page-proyectos" className="page visible">
       <section id="proyectos">
-        <span className="section-tag">// proyectos</span>
-        <h2 className="section-title">Lo que he construido.</h2>
+        <ScrollReveal>
+          <span className="section-tag">// proyectos</span>
+          <h2 className="section-title">Lo que he construido.</h2>
+        </ScrollReveal>
 
         <div className="projects-grid" id="projects-grid">
           {!proyectos?.length ? (
@@ -20,7 +23,11 @@ export default function ProjectsPage() {
               </p>
             </div>
           ) : (
-            proyectos.map((p) => <ProjectCard key={`${p.titulo}-${p.github}`} proyecto={p} />)
+            proyectos.map((p, i) => (
+              <ScrollReveal key={`${p.titulo}-${p.github}`} delay={i * 90}>
+                <ProjectCard proyecto={p} />
+              </ScrollReveal>
+            ))
           )}
         </div>
       </section>

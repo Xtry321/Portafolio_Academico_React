@@ -45,7 +45,9 @@
   --font-mono:    'DM Mono', monospace;
 
   /* Layout */
-  --nav-h:     64px;
+  --nav-h:        64px;
+  --content-max:  1280px;
+  --photo-size:   400px;
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 18px;

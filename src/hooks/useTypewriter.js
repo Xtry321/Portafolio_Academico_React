@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 
+/** Frases del efecto typewriter */
 const PHRASES = [
   "Desarrollador de software en formación.",
   "Apasionado por la tecnología y la innovación.",
   "Creando soluciones digitales funcionales.",
-  "Desarrollo web con enfoque moderno."
+  "Desarrollo web con enfoque moderno.",
 ];
 
 export function useTypewriter() {
