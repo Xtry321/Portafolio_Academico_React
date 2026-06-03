@@ -8,7 +8,7 @@ export default function AcademicSection() {
       <h2 className="section-title">
         Formación
         <br />
-        y certificaciones.
+        y experiencia.
       </h2>
 
       <div className="profile-cards-2">
@@ -31,24 +31,37 @@ export default function AcademicSection() {
           </ul>
         </article>
 
-        <article className="profile-card">
+        <article id="experiencia" className="profile-card profile-card--scroll">
           <header className="profile-card-header">
-            <ProfileIcon name="award" className="profile-card-icon" />
-            <h3>Certificaciones</h3>
+            <ProfileIcon name="briefcase" className="profile-card-icon" />
+            <h3>Experiencia</h3>
           </header>
-          <ul className="timeline-list">
-            {perfil.certificaciones.map((item) => (
-              <li key={`${item.nombre}-${item.fecha}`} className="timeline-item">
-                <time className="timeline-date" dateTime={item.fecha}>
-                  {item.fecha}
+          <ul className="timeline-list timeline-list--experience timeline-list--in-card">
+            {perfil.experiencia.map((item) => (
+              <li className="timeline-item" key={`${item.puesto}-${item.empresa}`}>
+                <time className="timeline-date" dateTime={item.anio || undefined}>
+                  {item.anio || item.periodo}
                 </time>
                 <div className="timeline-rail" aria-hidden="true">
                   <span className="timeline-dot" />
                 </div>
-                <div className="timeline-body timeline-body--cert">
-                  <strong>{item.nombre}</strong>
-                  <span>{item.emisor}</span>
-                </div>
+                <article className="timeline-body timeline-body--experience timeline-body--in-card">
+                  <h4>{item.puesto}</h4>
+                  <p className="experience-meta">
+                    <span>{item.empresa}</span>
+                    {item.anio && item.periodo ? (
+                      <>
+                        <span className="experience-dot">·</span>
+                        <span>{item.periodo}</span>
+                      </>
+                    ) : null}
+                  </p>
+                  <ul>
+                    {item.tareas.map((tarea) => (
+                      <li key={tarea}>{tarea}</li>
+                    ))}
+                  </ul>
+                </article>
               </li>
             ))}
           </ul>

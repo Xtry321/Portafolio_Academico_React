@@ -5,7 +5,6 @@ export const perfil = {
 
   foto: "/assets/img/foto.webp",
 
-  /** Texto a la derecha de tu foto en el inicio */
   bio: [
     "Soy estudiante de Ingeniería de Sistemas que le motiva la creación de soluciones tecnológicas innovadoras.",
     "Apasionado por la ciberseguridad y el desarrollo de software.",

@@ -423,11 +423,47 @@
   padding: 1.5rem;
 }
 
-.timeline-body--experience h3 {
+.timeline-body--experience h3,
+.timeline-body--experience h4 {
   font-family: var(--font-display);
   font-size: 1.2rem;
   color: var(--on-surface);
   margin-bottom: 0.35rem;
+}
+
+.timeline-body--in-card {
+  background: transparent;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.timeline-body--in-card h4 {
+  font-size: 1rem;
+}
+
+.timeline-list--in-card::before {
+  opacity: 0.35;
+}
+
+.profile-card--scroll {
+  scroll-margin-top: calc(var(--nav-h) + 12px);
+}
+
+.skill-tags-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.skill-tags-group-label {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--on-surface-variant);
 }
 
 .skill-bars {

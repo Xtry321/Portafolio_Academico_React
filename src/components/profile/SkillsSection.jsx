@@ -31,29 +31,53 @@ export default function SkillsSection() {
         <article className="profile-card">
           <header className="profile-card-header">
             <ProfileIcon name="layers" className="profile-card-icon" />
-            <h3>Frameworks y herramientas</h3>
+            <h3>Frameworks, herramientas y soft skills</h3>
           </header>
-          <div className="skill-tags skill-tags-lg">
-            {perfil.frameworks.map((item) => (
-              <span className="tag tag-lg tag-primary" key={item}>
-                {item}
-              </span>
-            ))}
+          <div className="skill-tags-stack">
+            <div className="skill-tags-group">
+              <p className="skill-tags-group-label">Frameworks y herramientas</p>
+              <div className="skill-tags skill-tags-lg">
+                {perfil.frameworks.map((item) => (
+                  <span className="tag tag-lg tag-primary" key={item}>
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="skill-tags-group">
+              <p className="skill-tags-group-label">Soft skills</p>
+              <div className="skill-tags skill-tags-lg">
+                {perfil.softSkills.map((item) => (
+                  <span className="tag tag-lg" key={item}>
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </article>
 
         <article className="profile-card">
           <header className="profile-card-header">
-            <ProfileIcon name="users" className="profile-card-icon" />
-            <h3>Soft skills</h3>
+            <ProfileIcon name="award" className="profile-card-icon" />
+            <h3>Certificaciones</h3>
           </header>
-          <div className="skill-tags skill-tags-lg">
-            {perfil.softSkills.map((item) => (
-              <span className="tag tag-lg" key={item}>
-                {item}
-              </span>
+          <ul className="timeline-list">
+            {perfil.certificaciones.map((item) => (
+              <li key={`${item.nombre}-${item.fecha}`} className="timeline-item">
+                <time className="timeline-date" dateTime={item.fecha}>
+                  {item.fecha}
+                </time>
+                <div className="timeline-rail" aria-hidden="true">
+                  <span className="timeline-dot" />
+                </div>
+                <div className="timeline-body timeline-body--cert">
+                  <strong>{item.nombre}</strong>
+                  <span>{item.emisor}</span>
+                </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </article>
       </div>
     </section>

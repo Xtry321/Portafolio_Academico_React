@@ -1,5 +1,6 @@
 import {
   LuAward,
+  LuBriefcase,
   LuCode,
   LuGithub,
   LuGraduationCap,
@@ -14,6 +15,7 @@ import {
 const ICON_MAP = {
   graduation: LuGraduationCap,
   award: LuAward,
+  briefcase: LuBriefcase,
   code: LuCode,
   layers: LuLayers,
   users: LuUsers,
