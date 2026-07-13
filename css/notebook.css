@@ -36,7 +36,7 @@
 .weeks-list { list-style: none; }
 
 .week-item {
-  padding: 0.75rem 1.25rem;
+  padding: 0.5rem 1.25rem;
   cursor: pointer;
   border-bottom: 1px solid var(--outline-variant);
   transition: background .2s, color .2s;
