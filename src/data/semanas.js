@@ -1685,4 +1685,18 @@ Para garantizar la resiliencia y resguardar el sistema bajo escenarios de alta d
       "Burns, B. (2016). Designing Distributed Systems. O'Reilly Media."
     ]
   },
+    /* Semana 15 */
+  {
+    titulo: "Monografía",
+    fecha:  "06/10/2026",
+
+    notas: `
+    [img: /assets/img/regresion.png | Tecnologías Web Básicas]
+    `,
+
+    reflexion: ``,
+
+    bibliografia: [
+    ]
+  },
 ];
