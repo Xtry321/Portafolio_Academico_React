@@ -1691,7 +1691,10 @@ Para garantizar la resiliencia y resguardar el sistema bajo escenarios de alta d
     fecha:  "06/10/2026",
 
     notas: `
-    [img: /assets/img/regresion.png | Tecnologías Web Básicas]
+[img: /assets/img/regresion.png | Tecnologías Web Básicas]
+[img: /assets/img/residuos.png | Tecnologías Web Básicas]
+[img: /assets/img/residuos_multiple.png | Tecnologías Web Básicas]
+[img: /assets/img/multiple.png | Tecnologías Web Básicas]
     `,
 
     reflexion: ``,
